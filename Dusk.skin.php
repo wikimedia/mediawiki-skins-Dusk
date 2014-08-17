@@ -17,7 +17,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
  * @ingroup Skins
  */
 class SkinDusk extends SkinTemplate {
-	var $skinname = 'dusk', $stylename = 'dusk',
+	public $skinname = 'dusk', $stylename = 'dusk',
 		$template = 'DuskTemplate', $useHeadElement = true;
 
 	function setupSkinUserCss( OutputPage $out ) {
