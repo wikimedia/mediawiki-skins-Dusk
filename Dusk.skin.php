@@ -24,9 +24,11 @@ class SkinDusk extends SkinTemplate {
 		parent::setupSkinUserCss( $out );
 
 		// Add CSS via ResourceLoader
-		// Need to use addModuleStyles() instead of addModules() for proper
-		// RTL support...no idea *why*, though!
-		$out->addModuleStyles( 'skins.dusk' );
+		$out->addModuleStyles( array(
+			'mediawiki.skinning.interface',
+			'mediawiki.skinning.content.externallinks',
+			'skins.dusk'
+		) );
 	}
 }
 
@@ -43,6 +45,8 @@ class DuskTemplate extends BaseTemplate {
 	 * outputs a formatted page.
 	 */
 	public function execute() {
+		$this->data['pageLanguage'] = $this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
+
 		$this->html( 'headelement' );
 ?><div id="globalWrapper">
 		<div id="header">
@@ -54,10 +58,7 @@ class DuskTemplate extends BaseTemplate {
 			<div id="content" class="mw-body-primary">
 				<a id="contentTop"></a>
 				<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
-				<h1 id="firstHeading" class="firstHeading" lang="<?php
-		$this->data['pageLanguage'] = $this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
-		$this->text( 'pageLanguage' );
-	?>"><span dir="auto"><?php $this->html( 'title' ) ?></span></h1>
+				<h1 id="firstHeading" class="firstHeading" lang="<?php $this->text( 'pageLanguage' ); ?>"><span dir="auto"><?php $this->html( 'title' ) ?></span></h1>
 				<div id="bodyContent" class="mw-body">
 					<h3 id="siteSub"><?php $this->msg( 'tagline' ) ?></h3>
 					<div id="contentSub"><?php $this->html( 'subtitle' ) ?></div>
@@ -217,7 +218,7 @@ class DuskTemplate extends BaseTemplate {
 		foreach ( $this->getToolbox() as $key => $tbitem ) {
 			echo $this->makeListItem( $key, $tbitem );
 		}
-		wfRunHooks( 'MonoBookTemplateToolboxEnd', array( &$this ) );
+
 		wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this, true ) );
 ?>
 			</ul>
