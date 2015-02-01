@@ -58,7 +58,7 @@ class DuskTemplate extends BaseTemplate {
 			<div id="content" class="mw-body-primary">
 				<a id="contentTop"></a>
 				<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
-				<h1 id="firstHeading" class="firstHeading" lang="<?php $this->text( 'pageLanguage' ); ?>"><span dir="auto"><?php $this->html( 'title' ) ?></span></h1>
+				<h1 id="firstHeading" class="firstHeading" lang="<?php $this->text( 'pageLanguage' ); ?>"><?php $this->html( 'title' ) ?></h1>
 				<div id="bodyContent" class="mw-body">
 					<h3 id="siteSub"><?php $this->msg( 'tagline' ) ?></h3>
 					<div id="contentSub"><?php $this->html( 'subtitle' ) ?></div>
