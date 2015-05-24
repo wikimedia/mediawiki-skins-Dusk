@@ -12,44 +12,18 @@
  *
  * To install, place the Dusk folder (the folder containing this file!) into
  * skins/ and add this line to your wiki's LocalSettings.php:
- * require_once("$IP/skins/Dusk/Dusk.php");
+ * wfLoadSkin( 'Dusk' );
  */
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-	die( 'Not a valid entry point.' );
+if ( function_exists( 'wfLoadSkin' ) ) {
+	wfLoadSkin( 'Dusk' );
+	// Keep i18n globals so mergeMessageFileList.php doesn't break
+	$wgMessagesDirs['Dusk'] = __DIR__ . '/i18n';
+	wfWarn(
+		'Deprecated PHP entry point used for Dusk skin. Please use wfLoadSkin instead, ' .
+		'see https://www.mediawiki.org/wiki/Extension_registration for more details.'
+	);
+	return;
+} else {
+	die( 'This version of the Dusk skin requires MediaWiki 1.25+' );
 }
-
-// Skin credits that will show up on Special:Version
-$wgExtensionCredits['skin'][] = array(
-	'path' => __FILE__,
-	'name' => 'Dusk',
-	'version' => '2.1',
-	'author' => array( 'Gregory S. Hayes', 'Becca Wei', 'Jack Phoenix' ),
-	'description' => 'Dusk MediaWiki skin, based on WordPress Dusk theme',
-	'url' => 'https://www.mediawiki.org/wiki/Skin:Dusk',
-);
-
-// The first instance must be strtolower()ed so that useskin=dusk works and
-// so that it does *not* force an initial capital (i.e. we do NOT want
-// useskin=Dusk) and the second instance is used to determine the name of
-// *this* file.
-$wgValidSkinNames['dusk'] = 'Dusk';
-
-// Autoload the skin class and set up CSS & JS (via ResourceLoader)
-$wgAutoloadClasses['SkinDusk'] = __DIR__ . '/Dusk.skin.php';
-
-$wgResourceModules['skins.dusk'] = array(
-	'styles' => array(
-		// Styles custom to the Dusk skin
-		'skins/Dusk/resources/css/main.css' => array( 'media' => 'screen' )
-	),
-	'position' => 'top'
-);
-
-// Theme(s)
-$wgResourceModules['skins.dusk.green'] = array(
-	'styles' => array(
-		'skins/Dusk/resources/themes/green/green.css' => array( 'media' => 'screen' )
-	),
-	'position' => 'top'
-);
