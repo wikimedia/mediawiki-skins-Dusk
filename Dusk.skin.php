@@ -7,10 +7,6 @@
  * @ingroup Skins
  */
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-	die();
-}
-
 /**
  * Inherit main code from SkinTemplate, set the CSS and template filter.
  *
