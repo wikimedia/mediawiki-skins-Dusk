@@ -219,14 +219,14 @@ class DuskTemplate extends BaseTemplate {
 			echo $this->makeListItem( $key, $tbitem );
 		}
 
-		wfRunHooks( 'SkinTemplateToolboxEnd', array( &$this, true ) );
+		Hooks::run( 'SkinTemplateToolboxEnd', array( &$this, true ) );
 ?>
 			</ul>
 		</div>
 	</div>
 <?php
 		// Hook point for the ShoutWiki Ads extension
-		wfRunHooks( 'DuskAfterToolbox', array( $this ) );
+		Hooks::run( 'DuskAfterToolbox', array( $this ) );
 	} // toolbox()
 
 	/**
