@@ -17,18 +17,22 @@
 		"SkinDusk": "Dusk.skin.php",
 		"DuskTemplate": "Dusk.skin.php"
 	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Dusk"
+	},
 	"ResourceModules": {
 		"skins.dusk": {
 			"styles": {
-				"skins/Dusk/resources/css/main.css": {
+				"resources/css/main.css": {
 					"media": "screen"
 				}
 			},
 			"position": "top"
 		},
-		"skins.dusk.green": {
+		"themeloader.skins.dusk.green": {
 			"styles": {
-				"skins/Dusk/resources/themes/green/green.css": {
+				"resources/themes/green/green.css": {
 					"media": "screen"
 				}
 			},
