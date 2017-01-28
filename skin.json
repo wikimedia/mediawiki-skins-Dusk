@@ -7,11 +7,16 @@
 		"Jack Phoenix"
 	],
 	"url": "https://www.mediawiki.org/wiki/Skin:Dusk",
-	"description": "Dusk MediaWiki skin, based on WordPress Dusk theme",
+	"descriptionmsg": "dusk-desc",
 	"license-name": "GPL-2.0+",
 	"type": "skin",
 	"ValidSkinNames": {
 		"dusk": "Dusk"
+	},
+	"MessagesDirs": {
+		"SkinDusk": [
+			"i18n"
+		]
 	},
 	"AutoloadClasses": {
 		"SkinDusk": "Dusk.skin.php",
