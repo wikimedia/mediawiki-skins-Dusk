@@ -1,10 +1,11 @@
 {
 	"name": "Dusk",
-	"version": "3.2",
+	"version": "3.2.1",
 	"author": [
 		"Gregory S. Hayes",
 		"Becca Wei",
-		"Jack Phoenix"
+		"Jack Phoenix",
+		"Samantha Nguyen"
 	],
 	"url": "https://www.mediawiki.org/wiki/Skin:Dusk",
 	"description": "Dusk MediaWiki skin, based on WordPress Dusk theme",
@@ -37,6 +38,11 @@
 				}
 			},
 			"position": "top"
+		}
+	},
+	"ResourceModuleSkinStyles": {
+		"dusk": {
+			"+mediawiki.special.preferences": "resources/css/special.preferences.css"
 		}
 	},
 	"manifest_version": 1
