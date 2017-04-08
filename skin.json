@@ -1,6 +1,6 @@
 {
 	"name": "Dusk",
-	"version": "3.2.1",
+	"version": "3.2.2",
 	"author": [
 		"Gregory S. Hayes",
 		"Becca Wei",
@@ -47,7 +47,7 @@
 	},
 	"ResourceModuleSkinStyles": {
 		"dusk": {
-			"+mediawiki.special.preferences": "resources/css/special.preferences.css"
+			"+mediawiki.special.preferences.styles": "resources/css/special.preferences.styles.css"
 		}
 	},
 	"manifest_version": 1
