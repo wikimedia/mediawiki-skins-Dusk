@@ -1,6 +1,6 @@
 {
 	"name": "Dusk",
-	"version": "3.2.2",
+	"version": "3.2.3",
 	"author": [
 		"Gregory S. Hayes",
 		"Becca Wei",
@@ -18,6 +18,9 @@
 		"SkinDusk": [
 			"i18n"
 		]
+	},
+	"ThemeModules": {
+		"dusk": [ "green" ]
 	},
 	"AutoloadClasses": {
 		"SkinDusk": "Dusk.skin.php",
