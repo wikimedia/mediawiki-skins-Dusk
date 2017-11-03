@@ -7,32 +7,6 @@
  * @ingroup Skins
  */
 
-/**
- * Inherit main code from SkinTemplate, set the CSS and template filter.
- *
- * @ingroup Skins
- */
-class SkinDusk extends SkinTemplate {
-	public $skinname = 'dusk', $stylename = 'dusk',
-		$template = 'DuskTemplate', $useHeadElement = true;
-
-	function setupSkinUserCss( OutputPage $out ) {
-		parent::setupSkinUserCss( $out );
-
-		// Add CSS via ResourceLoader
-		$out->addModuleStyles( array(
-			'mediawiki.skinning.interface',
-			'mediawiki.skinning.content.externallinks',
-			'skins.dusk'
-		) );
-	}
-}
-
-/**
- * Main Dusk skin class.
- *
- * @ingroup Skins
- */
 class DuskTemplate extends BaseTemplate {
 	/**
 	 * Template filter callback for the Dusk skin.

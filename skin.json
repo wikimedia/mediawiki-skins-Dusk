@@ -1,6 +1,6 @@
 {
 	"name": "Dusk",
-	"version": "3.3.0",
+	"version": "3.3.1",
 	"author": [
 		"Gregory S. Hayes",
 		"Becca Wei",
@@ -23,8 +23,8 @@
 		"dusk": [ "green" ]
 	},
 	"AutoloadClasses": {
-		"SkinDusk": "Dusk.skin.php",
-		"DuskTemplate": "Dusk.skin.php"
+		"SkinDusk": "includes/SkinDusk.php",
+		"DuskTemplate": "includes/DuskTemplate.php"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
