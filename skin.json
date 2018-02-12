@@ -36,16 +36,14 @@
 				"resources/css/main.css": {
 					"media": "screen"
 				}
-			},
-			"position": "top"
+			}
 		},
 		"themeloader.skins.dusk.green": {
 			"styles": {
 				"resources/themes/green/green.css": {
 					"media": "screen"
 				}
-			},
-			"position": "top"
+			}
 		}
 	},
 	"ResourceModuleSkinStyles": {
