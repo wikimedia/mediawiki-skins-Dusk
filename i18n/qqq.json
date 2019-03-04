@@ -1,4 +1,6 @@
 {
 	"@metadata": {},
-	"dusk-desc": "{{desc|what=skin|name=Dusk|url=https://www.mediawiki.org/wiki/Skin:Dusk}}"
+	"dusk-desc": "{{desc|what=skin|name=Dusk|url=https://www.mediawiki.org/wiki/Skin:Dusk}}",
+	"dusk-jump-to-navigation": "Accessibility link for jumping to the navigation links. Visually hidden by default.\n\nSee also\n* {{msg-mw|Navigation}}",
+	"dusk-jump-to-search": "Accessibility link for jumping to the site search. Visually hidden by default.\n\nSee also\n* {{msg-mw|Search}}"
 }

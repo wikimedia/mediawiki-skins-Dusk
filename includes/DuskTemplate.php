@@ -34,7 +34,9 @@ class DuskTemplate extends BaseTemplate {
 					<div id="contentSub"><?php $this->html( 'subtitle' ) ?></div>
 					<?php if ( $this->data['undelete'] ) { ?><div id="contentSub"><?php $this->html( 'undelete' ) ?></div><?php } ?>
 					<?php if ( $this->data['newtalk'] ) { ?><div class="usermessage"><?php $this->html( 'newtalk' ) ?></div><?php } ?>
-					<div id="jump-to-nav" class="mw-jump"><?php $this->msg( 'jumpto' ) ?> <a href="#column-one"><?php $this->msg( 'jumptonavigation' ) ?></a><?php $this->msg( 'comma-separator' ) ?><a href="#searchInput"><?php $this->msg( 'jumptosearch' ) ?></a></div>
+					<div id="jump-to-nav"></div>
+					<a class="mw-jump-link" href="#column-one"><?php $this->msg( 'dusk-jump-to-navigation' ) ?></a>
+					<a class="mw-jump-link" href="#searchInput"><?php $this->msg( 'dusk-jump-to-search' ) ?></a>
 					<!-- start content -->
 					<?php
 					$this->html( 'bodytext' );
