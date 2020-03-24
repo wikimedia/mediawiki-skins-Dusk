@@ -332,7 +332,7 @@ ul#f-list {
 
 /* hide from incapable browsers */
 head:first-child+body #footer li { white-space: nowrap; }
-div#footer > div > a > img {
+#footer > div > a > img {
 	margin: 0 8px;
 	padding: 5px; /* added this */
 	position: relative;
