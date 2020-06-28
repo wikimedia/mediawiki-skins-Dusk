@@ -374,73 +374,14 @@ select#wpLicense {
 	width: 405px !important;
 }
 
-/** ProblemReports */
-/* Don't center things on the ProblemReports dialog */
-div#reportProblemForm {
-	text-align: justify;
-}
-
-/* Make the list of templated responses one percent smaller so that it fits
-(on individual problem report view) */
-#mailer #mailer-templates {
-	width: 24% !important;
-}
-
-/* To/From/Subject labels on the ProblemReports mailer form */
-#mailer .headers label {
-	width: 50px !important;
-}
-
-/** CSS fixes for social tools */
-/* Special:GiveGift */
-div.g-give-container {
-	width: auto;
-}
-
-/** Comments */
-div#allcomments .full,
-div#allcomments .reply {
-	width: auto;
-}
-
-textarea#comment {
-	width: 495px !important;
-}
+/** Miscellaneous CSS fixes for social tools that really should be elsewhere but... */
 
 /** FanBoxes */
-/* Special:UserBoxes */
-input#inputRightSide {
-	width: 300px !important;
-}
 
-div.category-section div.categorytext, textarea#pageCtg {
-	width: auto !important;
-}
-
-/* Scale down the user boxes on social profiles so that they don't overlap with
-the user activity section */
-div#user-page-left .individual-fanbox {
-	width: 245px;
-}
-
-/* "Add this box to your userpage?" after clicking on a user box on someone else's profile */
-div.fanbox-pop-up-box-profile {
-	width: 181px;
-}
-
-/* "You have successfully added this userbox to your userpage." after adding a user box via someone else's profile */
-div.show-addremove-message-half {
-	width: 180px;
-}
-
-/* Why won't this work when combined with the above rule??? Why do I have to resort to a pixel-based fixed width? */
+/* Why do I have to resort to a pixel-based fixed width? */
+/* @todo FIXME: this is used by FanBoxes' Special:UserBox but also by BlogPage's Special:CreateBlogPost... */
 div#create-tagcloud {
 	width: 500px !important;
-}
-
-/* Miscellaneous hacky fixes for the image uploading functionality */
-div.create-fanbox-image iframe {
-	width: 495px;
 }
 
 /* Nope, it won't work. Stupid iframe...
@@ -457,11 +398,6 @@ div.link-left-units {
 	width: 100px;
 }
 */
-
-/** PollNY */
-div.create-poll-top {
-	width: auto;
-}
 
 /** @todo FIXME: image upload iframe (once again...) */
 
