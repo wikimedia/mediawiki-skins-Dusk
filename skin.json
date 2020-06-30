@@ -1,6 +1,6 @@
 {
 	"name": "Dusk",
-	"version": "3.3.3",
+	"version": "3.3.4",
 	"author": [
 		"Gregory S. Hayes",
 		"Becca Wei",
@@ -48,6 +48,13 @@
 	},
 	"ResourceModuleSkinStyles": {
 		"dusk": {
+			"+ext.comments.css": "resources/css/extensions/ext.comments.css",
+			"+ext.fanBoxes": "resources/css/extensions/ext.fanBoxes.css",
+			"+ext.fanBoxes.createform": "resources/css/extensions/ext.fanBoxes.createform.css",
+			"+ext.pollNY.css": "resources/css/extensions/ext.pollNY.css",
+			"+ext.problemReports": "resources/css/extensions/ext.problemReports.css",
+			"+ext.problemReports.special": "resources/css/extensions/ext.problemReports.special.css",
+			"+ext.socialprofile.special.givegift.css": "resources/css/extensions/ext.socialprofile.special.givegift.css",
 			"+mediawiki.special.preferences.styles": "resources/css/special.preferences.styles.css"
 		}
 	},
