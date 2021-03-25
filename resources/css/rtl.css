@@ -188,14 +188,3 @@ li#pt-login {
 	margin-top: 3em;
 }
 * html #column-one { right: 0; }
-
-/* js pref toc */
-#preftoc { float: right; }
-/* workaround for moz bug, displayed bullets on left side */
-#preftoc li { list-style: none; }
-#prefcontrol { float: right; }
-fieldset.prefsection,
-fieldset.operaprefsection {
-	margin-left: 0 !important;
-	margin-right: 15em;
-}

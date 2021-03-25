@@ -1,6 +1,6 @@
 {
 	"name": "Dusk",
-	"version": "3.3.4",
+	"version": "3.3.5",
 	"author": [
 		"Gregory S. Hayes",
 		"Becca Wei",
@@ -11,6 +11,9 @@
 	"descriptionmsg": "dusk-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.34.0"
+	},
 	"ValidSkinNames": {
 		"dusk": "Dusk"
 	},
@@ -54,8 +57,7 @@
 			"+ext.pollNY.css": "resources/css/extensions/ext.pollNY.css",
 			"+ext.problemReports": "resources/css/extensions/ext.problemReports.css",
 			"+ext.problemReports.special": "resources/css/extensions/ext.problemReports.special.css",
-			"+ext.socialprofile.special.givegift.css": "resources/css/extensions/ext.socialprofile.special.givegift.css",
-			"+mediawiki.special.preferences.styles": "resources/css/special.preferences.styles.css"
+			"+ext.socialprofile.special.givegift.css": "resources/css/extensions/ext.socialprofile.special.givegift.css"
 		}
 	},
 	"manifest_version": 1
