@@ -187,7 +187,7 @@ class DuskTemplate extends BaseTemplate {
 		<div class="pBody">
 			<ul>
 <?php
-		foreach ( $this->getToolbox() as $key => $tbitem ) {
+		foreach ( $this->data['sidebar']['TOOLBOX'] as $key => $tbitem ) {
 			echo $this->makeListItem( $key, $tbitem );
 		}
 
