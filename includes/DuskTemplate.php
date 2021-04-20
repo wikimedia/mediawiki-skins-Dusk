@@ -15,7 +15,9 @@ class DuskTemplate extends BaseTemplate {
 	 * outputs a formatted page.
 	 */
 	public function execute() {
-		$this->data['pageLanguage'] = $this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
+		$skin = $this->getSkin();
+
+		$this->data['pageLanguage'] = $skin->getTitle()->getPageViewLanguage()->getHtmlCode();
 
 		$this->html( 'headelement' );
 ?><div id="globalWrapper">
@@ -82,10 +84,13 @@ class DuskTemplate extends BaseTemplate {
 		<div id="footer" class="noprint">
 			<p></p>
 			<?php
-			foreach ( $this->getFooterIcons( 'icononly' ) as $blockName => $footerIcons ) { ?>
+			foreach ( $this->get( 'footericons' ) as $blockName => &$footerIcons ) { ?>
 			<div id="f-<?php echo htmlspecialchars( $blockName ); ?>ico">
-<?php 			foreach ( $footerIcons as $icon ) {
-					echo $this->getSkin()->makeFooterIcon( $icon );
+<?php 			foreach ( $footerIcons as $footerIconKey => $icon ) {
+					if ( !isset( $footerIcon['src'] ) ) {
+						unset( $footerIcons[$footerIconKey] );
+					}
+					echo $skin->makeFooterIcon( $icon );
 				}
 ?>
 			</div>
