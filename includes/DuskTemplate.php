@@ -27,7 +27,7 @@ class DuskTemplate extends BaseTemplate {
 			</div>
 		</div>
 		<div id="column-content">
-			<div id="content" class="mw-body-primary">
+			<div id="content" class="mw-body-primary" role="main">
 				<a id="contentTop"></a>
 				<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
 				<h1 id="firstHeading" class="firstHeading" lang="<?php $this->text( 'pageLanguage' ); ?>"><?php $this->html( 'title' ) ?></h1>
@@ -55,7 +55,7 @@ class DuskTemplate extends BaseTemplate {
 		<div id="column-one"<?php $this->html( 'userlangattributes' ) ?>>
 			<?php $this->cactions(); ?>
 
-			<div class="portlet" id="p-personal">
+			<div class="portlet" id="p-personal" role="navigation">
 				<h5><?php $this->msg( 'personaltools' ) ?></h5>
 				<div class="pBody">
 					<ul<?php $this->html( 'userlangattributes' ) ?>>
@@ -67,7 +67,7 @@ class DuskTemplate extends BaseTemplate {
 				</div>
 			</div>
 
-			<div class="portlet" id="p-logo">
+			<div class="portlet" id="p-logo" role="banner">
 				<?php
 					echo Html::element( 'a', array(
 						'href' => $this->data['nav_urls']['mainpage']['href'],
@@ -81,7 +81,7 @@ class DuskTemplate extends BaseTemplate {
 			?>
 		</div><!-- end of the left (by default at least) column -->
 		<div class="visualClear"></div>
-		<div id="footer" class="noprint">
+		<div id="footer" class="noprint" role="contentinfo" lang="<?php echo $this->get( 'userlang' ) ?>" dir="<?php echo $this->get( 'dir' ) ?>">
 			<p></p>
 			<?php
 			foreach ( $this->get( 'footericons' ) as $blockName => &$footerIcons ) { ?>
@@ -148,7 +148,7 @@ class DuskTemplate extends BaseTemplate {
 	 */
 	function searchBox() {
 ?>
-	<div id="p-search" class="portlet">
+	<div id="p-search" class="portlet" role="search">
 		<h5><label for="searchInput"><?php $this->msg( 'search' ) ?></label></h5>
 		<div class="pBody">
 			<form name="searchform" action="<?php $this->text( 'wgScript' ) ?>" id="searchform">
@@ -168,7 +168,7 @@ class DuskTemplate extends BaseTemplate {
 	 */
 	function cactions() {
 ?>
-	<div id="p-cactions" class="portlet">
+	<div id="p-cactions" class="portlet" role="navigation">
 		<h5><?php $this->msg( 'views' ) ?></h5>
 		<div class="pBody">
 			<ul><?php
@@ -187,7 +187,7 @@ class DuskTemplate extends BaseTemplate {
 	 */
 	function toolbox() {
 ?>
-	<div class="portlet" id="p-tb">
+	<div class="portlet" id="p-tb" role="navigation">
 		<h5><?php $this->msg( 'toolbox' ) ?></h5>
 		<div class="pBody">
 			<ul>
@@ -214,7 +214,7 @@ class DuskTemplate extends BaseTemplate {
 	function languageBox() {
 		if ( $this->data['language_urls'] ) {
 ?>
-	<div id="p-lang" class="portlet">
+	<div id="p-lang" class="portlet" role="navigation">
 		<h5<?php $this->html( 'userlangattributes' ) ?>><?php $this->msg( 'otherlanguages' ) ?></h5>
 		<div class="pBody">
 			<ul>
