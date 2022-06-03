@@ -69,11 +69,15 @@ html > body #column-one {
 	overflow: hidden;
 }
 
+/* This rule is needed to position the background image set below correctly for RTL languages */
+/* @noflip */body.rtl #content {
+	background-position-x: right;
+}
+
 #content {
 	float: left;
 	width: 550px;
 	padding: 0 20px 0 35px;
-	/* @embed */
 	background: url(../images/content-ltr.gif) no-repeat;
 	voice-family: "\"}\"";
 	voice-family: inherit;
