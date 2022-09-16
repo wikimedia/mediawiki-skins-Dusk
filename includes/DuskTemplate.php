@@ -19,7 +19,6 @@ class DuskTemplate extends BaseTemplate {
 
 		$this->data['pageLanguage'] = $skin->getTitle()->getPageViewLanguage()->getHtmlCode();
 
-		$this->html( 'headelement' );
 ?><div id="globalWrapper">
 		<div id="header">
 			<div id="title">
@@ -107,9 +106,6 @@ class DuskTemplate extends BaseTemplate {
 		</div>
 	</div>
 <?php
-		$this->printTrail();
-		echo Html::closeElement( 'body' );
-		echo Html::closeElement( 'html' );
 	} // execute()
 
 	/**
