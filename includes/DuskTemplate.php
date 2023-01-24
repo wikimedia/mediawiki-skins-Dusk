@@ -151,7 +151,11 @@ class DuskTemplate extends BaseTemplate {
 				<input type='hidden' name="title" value="<?php $this->text( 'searchtitle' ) ?>"/>
 				<?php
 					echo $this->makeSearchInput( array( 'id' => 'searchInput' ) );
-					echo $this->makeSearchButton( 'go', array( 'id' => 'searchGoButton', 'class' => 'searchButton' ) );
+					echo $this->makeSearchButton( 'go', array(
+						'id' => 'searchGoButton',
+						'class' => 'searchButton',
+						'value' => $this->getMsg( 'searcharticle' )->text()
+					) );
 				?>
 			</form>
 		</div>
