@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"StanProg",
 			"Vlad5250"
 		]
 	},
+	"dusk-desc": "Облик Dusk за МедияУики, базиран на WordPress-темата Dusk",
 	"dusk-jump-to-navigation": "Направо към навигацията",
 	"dusk-jump-to-search": "Направо към търсенето"
 }
