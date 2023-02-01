@@ -188,6 +188,10 @@ a.new, #column-content a.new, #p-personal a.new {
 	color:#a786c0;
 }
 
+.visualClear {
+	clear: both;
+}
+
 /* #6d00c0 #9f73c0 */
 /*
 **.firstHeading {
