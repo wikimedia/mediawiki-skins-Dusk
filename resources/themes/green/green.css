@@ -19,7 +19,6 @@
 }
 
 #content {
-	/* @embed */
 	background: url(images/content-ltr.gif) no-repeat;
 }
 
@@ -60,12 +59,10 @@ a.new, #column-content a.new, #p-personal a.new {
 }
 
 #globalWrapper {
-	/* @embed */
 	background: #EEEAE8 url(images/wrapper-ltr.gif) repeat-y;
 }
 
 #header {
-	/* @embed */
 	background: url(images/header-ltr.gif) no-repeat;
 }
 

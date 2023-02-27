@@ -11,7 +11,6 @@
 	float: left;
 	width: 210px;
 	padding: 80px 25px 0 15px;
-	/* @embed */
 	background: url(../images/sidebar-ltr.gif) no-repeat top right;
 	color: #878584;
 	font-size: 0.92em;
@@ -281,7 +280,6 @@ img.tex {
 #globalWrapper {
 	width: 760px;
 	margin: 0 auto;
-	/* @embed */
 	background: #EEEAE8 url(../images/wrapper-ltr.gif) repeat-y;
 	font-size: 0.9em;
 	text-align: left;
@@ -290,7 +288,6 @@ img.tex {
 #header {
 	width: 760px;
 	height: 170px;
-	/* @embed */
 	background: url(../images/header-ltr.gif) no-repeat;
 }
 
