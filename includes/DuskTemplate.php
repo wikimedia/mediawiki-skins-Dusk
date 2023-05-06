@@ -7,6 +7,8 @@
  * @ingroup Skins
  */
 
+use MediaWiki\MediaWikiServices;
+
 class DuskTemplate extends BaseTemplate {
 	/**
 	 * Template filter callback for the Dusk skin.
@@ -199,14 +201,14 @@ class DuskTemplate extends BaseTemplate {
 
 		// Avoid PHP 7.1 warning of passing $this by reference
 		$template = $this;
-		Hooks::run( 'SkinTemplateToolboxEnd', array( &$template, true ) );
+		MediaWikiServices::getInstance()->getHookContainer()->run( 'SkinTemplateToolboxEnd', array( &$template, true ) );
 ?>
 			</ul>
 		</div>
 	</div>
 <?php
 		// Hook point for the ShoutWiki Ads extension
-		Hooks::run( 'DuskAfterToolbox', array( $this ) );
+		MediaWikiServices::getInstance()->getHookContainer()->run( 'DuskAfterToolbox', array( $this ) );
 	} // toolbox()
 
 	/**
