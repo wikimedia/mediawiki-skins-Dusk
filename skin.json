@@ -45,7 +45,7 @@
 	},
 	"ResourceModules": {
 		"skins.dusk": {
-			"class": "ResourceLoaderSkinModule",
+			"class": "MediaWiki\\ResourceLoader\\SkinModule",
 			"features": {
 				"content-links": true,
 				"content-links-external": true,
