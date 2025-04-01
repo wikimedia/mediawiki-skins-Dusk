@@ -333,9 +333,14 @@ img.tex {
 ul#f-list {
 	margin-top: 4.5em;
 }
+/* Ensure that the copyright text (e.g. "Content is available under Creative Commons Attribution-Share
+ * Alike 3.0 Unported unless otherwise noted.") remains visually inside the content container (#column-content)
+ * instead of overflowing into the sidebar (#column-one) area.
+ */
+#f-list li#copyright {
+	display: inline-block;
+}
 
-/* hide from incapable browsers */
-head:first-child+body #footer li { white-space: nowrap; }
 #footer > div > a > img {
 	margin: 0 8px;
 	padding: 5px; /* added this */
