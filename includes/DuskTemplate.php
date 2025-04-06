@@ -21,7 +21,7 @@ class DuskTemplate extends BaseTemplate {
 	public function execute() {
 		$skin = $this->getSkin();
 
-		$this->data['pageLanguage'] = $skin->getTitle()->getPageViewLanguage()->getHtmlCode();
+		$this->data['pageLanguage'] = $skin->getTitle()->getPageLanguage()->getHtmlCode();
 
 ?><div id="globalWrapper">
 		<div id="header">
