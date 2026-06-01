@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"BaRaN6161 TURK",
+			"HakanIST",
 			"Hedda"
 		]
 	},
+	"dusk-prefs-talkpage": "[[mw:Skin talk:DeskMessMirrored|{{int:talk}}]]",
 	"dusk-desc": "WordPress Dusk görünüme dayalı Dusk MediaWiki teması",
 	"dusk-jump-to-navigation": "Gezinti kısmına atla",
 	"dusk-jump-to-search": "Arama kısmına atla"
