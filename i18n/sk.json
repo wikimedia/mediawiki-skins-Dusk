@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"dusk-prefs-talkpage": "[[mw:Skin talk:DeskMessMirrored|{{int:talk}}]]",
+	"dusk-desc": "Téma vzhľadu Dusk pre MediaWiki, založená na WordPress téme Dusk",
+	"dusk-jump-to-navigation": "Skočiť na navigáciu",
+	"dusk-jump-to-search": "Skočiť na vyhľadávanie"
+}
