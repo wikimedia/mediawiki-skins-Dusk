@@ -62,7 +62,17 @@ class DuskTemplate extends BaseTemplate {
 				<h5><?php $this->msg( 'personaltools' ) ?></h5>
 				<div class="pBody">
 					<ul<?php $this->html( 'userlangattributes' ) ?>>
-<?php				foreach ( $this->getPersonalTools() as $key => $item ) {
+<?php
+					$contentNav = $this->get( 'content_navigation' );
+					$personalTools = $this->getSkin()->getPersonalToolsForMakeListItem(
+						array_merge(
+							$contentNav['user-interface-preferences'],
+							$contentNav['user-page'],
+							$contentNav['notifications'],
+							$contentNav['user-menu']
+						)
+					);
+					foreach ( $personalTools as $key => $item ) {
 						echo $this->makeListItem( $key, $item );
 					}
 ?>
@@ -176,7 +186,14 @@ class DuskTemplate extends BaseTemplate {
 		<h5><?php $this->msg( 'views' ) ?></h5>
 		<div class="pBody">
 			<ul><?php
-				foreach ( $this->data['content_actions'] as $key => $tab ) {
+				$ca = $this->get( 'content_navigation' );
+				$content_actions = array_merge(
+					$ca['views'],
+					$ca['associated-pages'],
+					$ca['actions'],
+					$ca['variants']
+				);
+				foreach ( $content_actions as $key => $tab ) {
 					echo $this->makeListItem( $key, $tab );
 				}
 				?>
